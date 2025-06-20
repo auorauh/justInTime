@@ -1,38 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 .App {
-  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  font-family: 'DM Serif Display', sans-serif;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+  background-color: #FFDEAD;
+  display: flex;
+  position: sticky;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 5rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
+.logo {
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.landing {
+  background-image: url('./Assets/heroImg.jpg');
+  height: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+  gap: 3rem
+}
+.landingText {
+  font-size: 3rem;
+  padding-left: 5rem;
+  margin-top: 5rem;
+}
+.landingSubtext {
+  font-size: 1.75rem;
+  padding-left: 5rem;
+}
+.landingButtons {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding-left: 5rem;
+}
+.landingButton {
+  background-color: #7eb141;
+  height: 3rem;
+  width: 15rem;
+  border-radius: 10px;
+  font-size: 1.25rem;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
   color: white;
+  font-family: 'poppins';
+  font-weight: 900;
+  margin-left: 5rem;
 }
-
-.App-link {
-  color: #61dafb;
+.curve-mask {
+  width: 100%;
+  overflow: hidden;
+  padding-left: 0rem;
+  transform: translateY(1px);
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.curve-mask svg {
+  display: block;
+}
+.services {
+  background-color: #FFDEAD;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 3rem;
+  padding: 3rem 0;
+}
+.serviceCards {
+ width: 50%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ text-align: center;
+ flex-wrap: wrap;
+ padding: 2rem;
+ gap: 2rem;
+ /* margin: 3rem 0rem; */
+}
+.serviceText {
+  font-size: 2.5rem;
+  text-align: center;
+  padding-top: 3rem;
+}
+.serviceCard {
+  height: 8rem;
+  width: 20rem;
+  border-radius: 15px;
+  display: flex;
+  font-size: 1.25rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  justify-content: center;
+  align-items: center;
+}
+.serviceCard6 {
+  width: 25rem;
+  padding-left: 2rem;
+}
+.icons {
+  font-size: 4rem;
+  padding-right: 1rem;
+  color: #7eb141;
+}
+.learnMore {
+  display: flex;
+  flex-wrap: wrap;
+}
+.learnCard {
+  background-image: url('./Assets/heroImg.jpg');
+  background-position: center;
+  background-size:cover;
+  background-repeat: no-repeat;
+  width: 50%;
+  height: 25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  font-size: 2.5rem;
+  box-shadow: inset 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+.learnText {
+  z-index: 2;
+}
+.learnButton {
+  background-color: #101a30;
+  font-size: 1rem;
+  border-radius: 5px;
+  height: 3rem;
+  width: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  z-index: 2;
+}
+.grnBg {
+  background-color: rgb(73, 146, 73);;
+}
+.learnOverlay {
+  background-color: rgb(73, 146, 73);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0.5;
+}
+.learnOverlay2 {
+    background-color: rgba(16, 26, 48, 0.9);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0.5;
+}
+.quoteSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 2.5rem;
+  text-align: center;
+  padding: 2rem 0 ;
+}
+.quoteCards {
+  display: flex;
+  gap: 3rem;
+  padding: 2rem 0;
+}
+.quoteCard {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  height: 30rem;
+  width: 25rem;
+  font-size: 1rem;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.quoteImg {
+  width: 100%;
+  height: 60%;
+}
+.quoteCardText1 {
+  font-size: 2rem;
+}
+.quoteCardText2 {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  line-height: 1.5rem;
+}
+.quoteCardText3 {
+  height: 4rem;
+  color: rgb(85, 141, 85);
+}
+.footer-curve {
+  background-color: #FFDEAD;
+}
+footer {
+  padding: 40px 0;
+  color: black;
+  text-align: center;
+  height: 20rem;
+  background-color: #FFDEAD;
+  display: flex;
+  justify-content: center;
+  align-items:  center;
+  flex-direction: column;
+}
+.footerLinks {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5rem;
+  font-size: 1.25rem;
+  padding-bottom: 5rem;
+  padding-top: 2rem;
+  border-bottom: 1px solid black;
 }
