@@ -1,23 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
 .App {
   height: 100vh;
   width: 100vw;
   font-family: 'DM Serif Display', sans-serif;
+  overflow-x: hidden;
 }
 .header {
   background-color: #FFDEAD;
   display: flex;
-  position: sticky;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  height: 5rem;
+  height: 6rem;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
-.logo {
-
+.headerText {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+}
+.headerBtn {
+  background-color: rgb(73, 146, 73);
+  border-radius: 5px;
+  padding: .5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  z-index: 2;
 }
 .landing {
   background-image: url('./Assets/heroImg.jpg');
@@ -29,28 +41,31 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 3rem
 }
 .landingText {
   font-size: 3rem;
-  padding-left: 5rem;
-  margin-top: 5rem;
+  width: 30%;
+  margin: 4rem 40rem;
+  margin-bottom: 0rem;
 }
 .landingSubtext {
-  font-size: 1.75rem;
-  padding-left: 5rem;
+  font-size: 1.25rem;
+  font-family: 'poppins';
+  width: 30%;
+  font-weight: 900;
+  margin: 0 40rem;
 }
 .landingButtons {
   display: flex;
   flex-direction: row;
   gap: 1rem;
-  padding-left: 5rem;
+  margin: 0 35rem;
 }
 .landingButton {
   background-color: #7eb141;
-  height: 3rem;
+  height: 3.5rem;
   width: 15rem;
-  border-radius: 10px;
+  border-radius: 7px;
   font-size: 1.25rem;
   display: flex;
   justify-content: center;
@@ -76,7 +91,6 @@
   align-items: center;
   flex-direction: column;
   font-size: 3rem;
-  padding: 3rem 0;
 }
 .serviceCards {
  width: 50%;
@@ -85,14 +99,13 @@
  align-items: center;
  text-align: center;
  flex-wrap: wrap;
- padding: 2rem;
+ padding: 3rem;
  gap: 2rem;
- /* margin: 3rem 0rem; */
 }
 .serviceText {
   font-size: 2.5rem;
   text-align: center;
-  padding-top: 3rem;
+  margin-bottom: 4rem;
 }
 .serviceCard {
   height: 8rem;
@@ -151,7 +164,7 @@
   z-index: 2;
 }
 .grnBg {
-  background-color: rgb(73, 146, 73);;
+  background-color: rgb(73, 146, 73);
 }
 .learnOverlay {
   background-color: rgb(73, 146, 73);
@@ -230,4 +243,113 @@ footer {
   padding-bottom: 5rem;
   padding-top: 2rem;
   border-bottom: 1px solid black;
+}
+@media (max-width: 600px) {
+  .App {
+    width: 100vw;
+  }
+  .header {
+    height: 7rem;
+    font-size: .75rem;
+  }
+  .headerText {
+    font-size: 2.25rem;
+    margin: 1rem;
+  }
+  .logo {
+    font-size: 1.5rem;
+    width: 40%;
+  }
+  .landing {
+    font-size: .5rem;
+    gap: 1rem;
+    padding-left: 0rem;
+    height: 75%;
+  }
+  .landingText {
+    font-size: 2rem;
+    width: 80%;
+    margin: 4rem 2rem;
+    margin-bottom: 0;
+  }
+  .landingSubtext {
+    font-size: 1.25rem;
+    padding-left: 2rem;
+    margin: 0;
+    width: 100%;
+    
+  }
+  .landingButtons {
+    padding-left: 0rem;
+    margin: 0 1rem;
+    flex-direction: column;
+}
+.landingButton {
+  font-size: 1rem;
+  margin-left: 0rem;
+  width: 100%;
+}
+.services {
+}
+.serviceText {
+  font-size: 1.75rem;
+  padding: 1.75rem;
+  margin-bottom: 0;
+}
+.serviceCards {
+  width: 100%;
+}
+.serviceCard6 {
+  height: 8rem;
+  width: 20rem;
+  padding: 0rem 1rem;
+}
+.learnMore {
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+.learnCard {
+  width: 100%;
+}
+.learnText {
+  font-size: 2rem;
+  text-align: center;
+}
+.quoteSection {
+  padding: 2rem 1rem;
+  font-size: 1.75rem;
+}
+.quoteCards {
+  width: 100%;
+  flex-direction: column;
+}
+.quoteCard {
+  height: 30rem;
+  width: 100%;
+  font-size: 1rem;
+  border-radius: 15px;
+  overflow: hidden;
+}
+footer {
+  height: 70%;
+  font-size: 2.5rem;
+}
+.footerLinks {
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.copyright {
+  font-size: 1rem;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footerlogo {
+  width: 100%;
+}
 }

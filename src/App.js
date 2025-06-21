@@ -1,6 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
+import { useState, useEffect } from 'react';
 import heroImg from './Assets/heroImg.jpg'
+import icon from './Assets/logoBg.png'
 import { FaTrashArrowUp } from "react-icons/fa6";
 import { TbReportAnalytics } from "react-icons/tb";
 import { FaRecycle } from "react-icons/fa";
@@ -9,13 +11,28 @@ import { HiOutlineDocumentText } from "react-icons/hi2";
 import { TbCertificate } from "react-icons/tb";
 
 function App() {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 600);
+
+    useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 600);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
   return (
     <div className="App">
-      <header className="header"> <div className="logo"></div> <div>Services</div> <div>About</div> <div>Contact Us</div> <div className="learnButton grnBg">Free Quote</div></header>
+      <header className="header"> <div className="headerText"> Just In Time Trash</div> 
+      {isMobile ? <></> :
+        <>
+        <div>Services</div> 
+        {/* <div>About</div>  */}
+        <div>Contact Us</div>
+        </>
+      }
+      <div className="headerBtn">Free Quote</div></header>
       <div className="landing">
-        <div className="landingText">Premium Valet Trash & Bulk<br/>Removal for Multifamily</div>
-        <div className="landingSubtext">Comprehensive waste support services. Including doorstep trash pickup<br/> and recycling, bulk trash pickup, trashouts, and more.</div>
-        <div className="landingButtons"> <div className="landingButton">Request a Quote</div> <div className="landingButton">About Us</div></div>
+        <div className="landingText">Premium Valet Trash & Bulk Removal for Multifamily</div>
+        <div className="landingSubtext">Comprehensive waste support services. Including doorstep trash pickup and recycling, bulk trash pickup, trashouts, and more.</div>
+        <div className="landingButtons"> <div className="landingButton">Request a Quote</div> <div className="landingButton">About Us &gt;</div></div>
         <div class="curve-mask">
         <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
           <path d="M0,0 C480,50 960,50 1440,0 L1440,100 L0,100 Z" fill="#FFDEAD" />
@@ -24,7 +41,7 @@ function App() {
       </div>
 
       <div className="services">
-        <div className="serviceText">The best valet trash services company for multifamily<br/> communities</div>
+        <div className="serviceText">The best valet trash services company for multifamily communities</div>
         
         <div className="serviceCards">
           <div className="serviceCard"><FaTrashArrowUp className="icons"/> Valet Trash:<br/> Doorstep Pickup</div>
@@ -49,19 +66,19 @@ function App() {
             <img className="quoteImg" src={heroImg}/>
             <div className="quoteCardText1">Apartments</div>
             <div className="quoteCardText2">Multi-family Apartment<br/> Complexes</div>
-            <div className="quoteCardText3">Get a Quote</div>
+            <div className="quoteCardText3">Get a Quote &gt;</div>
           </div>
           <div className="quoteCard">
             <img className="quoteImg" src={heroImg}/> 
             <div className="quoteCardText1">Senior Living</div>
             <div className="quoteCardText2">Assisted Living Communities, Hospice Centers, and Senior Living</div>
-            <div className="quoteCardText3">Get a Quote</div>
+            <div className="quoteCardText3">Get a Quote &gt;</div>
           </div>
           <div className="quoteCard">
             <img className="quoteImg" src={heroImg}/>
             <div className="quoteCardText1">Campus</div>
             <div className="quoteCardText2">Student Housing and <br/>Campus Dorm Communities</div>
-            <div className="quoteCardText3">Get a Quote</div>
+            <div className="quoteCardText3">Get a Quote &gt;</div>
           </div>
         </div>
       </div>
@@ -71,7 +88,9 @@ function App() {
         </svg>
       </div>
       <footer>
-        Just In Time
+        {isMobile ? <img className="footerlogo" src={icon}/> : 'Just In Time Trash'}
+        
+        
         <div className="footerLinks">
           <div>About</div>
           <div>Contact</div>
@@ -80,7 +99,7 @@ function App() {
           <div>Locations</div>
           <div>Press</div>
         </div>
-        Copyright 2025 Just In Time
+        <div className="copyright">Copyright 2025 Just In Time</div>
       </footer>
     </div>
   );
